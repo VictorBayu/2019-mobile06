@@ -93,6 +93,6 @@ public class BrocaIndexFragment extends Fragment {
      */
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
-        void onFragmentInteraction(float index);
+        void onCalculateBrocaIndexClicked(float index);
     }
 }
