@@ -8,7 +8,7 @@
     tools:context=".Fragments.BrocaIndexFragment">
 
     <TextView
-        android:id="@+id/textTinggi"
+        android:id="@+id/text_height"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
@@ -31,13 +31,14 @@
         android:orientation="vertical"
         app:layout_constraintGuide_end="265dp" />
 
-    <TextView
-        android:id="@+id/text_hasil_tinggi"
-        android:layout_width="98dp"
-        android:layout_height="23dp"
+    <EditText
+        android:id="@+id/input_height"
+        android:layout_width="0dp"
+        android:layout_height="41dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
-        android:text="textTinggi"
+        android:hint="Height (cm)"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline4"
         app:layout_constraintTop_toTopOf="@+id/guideline3" />
 
@@ -49,42 +50,39 @@
         android:layout_marginTop="28dp"
         android:text="Jenis Kelamin"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textTinggi" />
+        app:layout_constraintTop_toBottomOf="@+id/text_height" />
 
     <RadioGroup
-        android:id="@+id/radioGroup2"
+        android:id="@+id/gender_group"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="24dp"
         app:layout_constraintStart_toStartOf="@+id/guideline4"
-        app:layout_constraintTop_toBottomOf="@+id/text_hasil_tinggi">
+        app:layout_constraintTop_toBottomOf="@+id/input_height">
 
         <RadioButton
             android:id="@+id/radio_male"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Laki - Laki" />
+
+        <RadioButton
+            android:id="@+id/radio_female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="56dp"
+            android:text="Wanita" />
     </RadioGroup>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button_calculate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="20dp"
         android:text="Hitung"
         app:layout_constraintStart_toStartOf="@+id/guideline4"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
-
-    <RadioButton
-        android:id="@+id/radioButton2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="24dp"
-        android:text="Wanita"
-        app:layout_constraintStart_toEndOf="@+id/radioGroup2"
-        app:layout_constraintTop_toBottomOf="@+id/text_hasil_tinggi" />
+        app:layout_constraintTop_toBottomOf="@+id/gender_group" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
